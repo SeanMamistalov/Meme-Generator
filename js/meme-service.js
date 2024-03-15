@@ -14,7 +14,6 @@ var gMeme = {
 };
 var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 };
 
-
-function getImg() {
-    return gMeme;
+function getMemes() {
+  return gMeme;
 }
