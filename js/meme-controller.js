@@ -16,7 +16,7 @@ function renderMeme() {
 function drawImg() {
   let imgData = getMemes();
   let img = new Image();
-  img.src = `./temp-memes/${imgData.selectedImgId}.jpg`;
+  img.src = `./memes/${imgData.selectedImgId}.png`;
   img.onload = () => {
     resizeCanvas(img);
     window.addEventListener("resize", () => resizeCanvas(img));
