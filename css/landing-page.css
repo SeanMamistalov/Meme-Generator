@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url('../images/pokemon-bgc.jpg');
+    background-size: cover;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.landing-heading {
+    font-size: 2rem;
+}
