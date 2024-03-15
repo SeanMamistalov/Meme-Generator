@@ -1,17 +1,46 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    background-image: url('../images/pokemon-bgc.jpg');
-    background-size: cover;
-    color: #fff;
-    line-height: 1.8;
+  background-image: url("../images/Bgc-landing-page.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.main-header {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .landing-heading {
-    font-size: 2rem;
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #fdfdfd;
+}
+
+.move-to-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffbe30;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.move-to-btn:hover {
+  background-color: #ffe572;
 }
