@@ -21,14 +21,8 @@
 <div class="canvas-container" id="canvas-container">
   <div class="meme-canvas">
     <canvas width="500" height="500"></canvas><br />
-    <input type="text" id="text-input" placeholder="Enter your text" /> <br>
-    <label for="fill-color">Fill Color:</label>
-    <select id="fill-color" onchange="onSetFillColor(this.value)">
-      <option value="lightblue">Light Blue</option>
-      <option value="blue">Blue</option>
-      <option value="yellow">Yellow</option>
-      <option value="purple">Purple</option>
-    </select>
+    <input type="text" id="text-input" placeholder="Enter your text" />
+    <input type="color" id="color-input" onchange="onSetFillColor(this.value)"/>
     <button onclick="onSave()">Save</button>
     <button onclick="onClearCanvas()">Clear</button>
     <button onclick="onLoad()">Load</button>
