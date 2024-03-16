@@ -1,4 +1,5 @@
 "use strict";
+var gImgs = [{ id: 1, url: "memes/1.jpg", keywords: ["funny", "pikachu"] }];
 
 let gElCanvas;
 let gCtx;
@@ -11,23 +12,25 @@ function onInit() {
 
 function renderMeme() {
   drawImg();
+  drawText();
 }
-
 function drawImg() {
   let imgData = getMemes();
   let img = new Image();
   img.src = `./memes/${imgData.selectedImgId}.png`;
   img.onload = () => {
     resizeCanvas(img);
-    window.addEventListener("resize", () => resizeCanvas(img));
-    drawText(); // Draw text after the image is loaded
+    window.removeEventListener("resize", () => resizeCanvas(img));
+    drawText();
   };
 }
 
 function resizeCanvas(img) {
-  const elContainer = document.querySelector(".meme-canvas");
-  gElCanvas.width = elContainer.clientWidth;
-  gElCanvas.height = elContainer.clientHeight;
+  if (!gElCanvas.width || !gElCanvas.height) {
+    const elContainer = document.querySelector(".meme-canvas");
+    gElCanvas.width = elContainer.clientWidth;
+    gElCanvas.height = elContainer.clientHeight;
+  }
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
 }
 
@@ -41,4 +44,14 @@ function drawText() {
   gCtx.font = `${fontSize}px Arial`;
   gCtx.textAlign = "center";
   gCtx.fillText(text, gElCanvas.width / 2, 40);
+}
+
+const textInput = document.getElementById("text-input");
+textInput.addEventListener("input", function () {
+  onUpdateTxt(this.value);
+});
+
+function onUpdateTxt(newText) {
+  setLineTxt(newText);
+  renderMeme();
 }
