@@ -35,3 +35,28 @@ footer {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+nav {
+  background-color: #ffffff;
+  padding: 10px 0; Add padding above and below
+}
+
+nav a {
+  margin: 5px;
+  color: orange;
+  text-decoration: none; 
+  padding: 0 20px; 
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+.main-header {
+  display: flex;
+}
+
+.logo-img {
+  width: 1000px; 
+  height: auto;
+}
