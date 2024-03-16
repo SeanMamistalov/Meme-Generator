@@ -2,7 +2,7 @@
 
 function renderGallery() {
   const galleryContainer = document.getElementById("gallery");
-  const images = [
+  var images = [
     { id: 1, url: "memes/1.png" },
     { id: 2, url: "memes/2.png" },
     { id: 3, url: "memes/3.png" },
@@ -27,9 +27,15 @@ function renderGallery() {
   images.forEach((image) => {
     const imgElement = document.createElement("img");
     imgElement.src = image.url;
+    imgElement.className = 'gallery-image';
+    imgElement.id = `image-${image.id}`;
     imgElement.style.width = (gElCanvas.width / 2) + 'px';
     imgElement.style.height = (gElCanvas.height / 2) + 'px';
     imgElement.style.marginRight = '10px';
+    imgElement.addEventListener('click', function() {
+      onImgSelect(image.id); 
+  });
+
     galleryContainer.appendChild(imgElement);
   });
 }

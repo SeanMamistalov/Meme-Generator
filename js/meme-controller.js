@@ -9,7 +9,6 @@ function onInit() {
   drawImg();
   renderMeme();
   renderGallery();
-
 }
 
 function renderMeme() {
@@ -56,5 +55,10 @@ textInput.addEventListener("input", function () {
 
 function onUpdateTxt(newText) {
   setLineTxt(newText);
+  renderMeme();
+}
+
+function onImgSelect(imgId) {
+  setImg(imgId);
   renderMeme();
 }
