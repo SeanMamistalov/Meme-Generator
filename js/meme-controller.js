@@ -1,5 +1,4 @@
 "use strict";
-var gImgs = [{ id: 1, url: "memes/1.jpg", keywords: ["funny", "pikachu"] }];
 
 let gElCanvas;
 let gCtx;
@@ -7,13 +6,17 @@ let gCtx;
 function onInit() {
   gElCanvas = document.querySelector("canvas");
   gCtx = gElCanvas.getContext("2d");
+  drawImg();
   renderMeme();
+  renderGallery();
+
 }
 
 function renderMeme() {
   drawImg();
   drawText();
 }
+
 function drawImg() {
   let imgData = getMemes();
   let img = new Image();
