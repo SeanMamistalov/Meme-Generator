@@ -129,7 +129,7 @@ a.download-link:hover {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  background-color: #ecc047;
+  background-color: #ecc149;
 }
 
 @media (max-width: 600px) {
