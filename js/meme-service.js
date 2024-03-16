@@ -7,7 +7,7 @@ var gMeme = {
     {
       txt: "",
       size: 30,
-      color: "yellow",
+      color: "",
     },
   ],
 };

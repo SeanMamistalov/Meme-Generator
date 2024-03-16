@@ -6,6 +6,7 @@ let gCtx;
 function onInit() {
   gElCanvas = document.querySelector("canvas");
   gCtx = gElCanvas.getContext("2d");
+  onSetFillColor('lightblue')
   drawImg();
   renderMeme();
   renderGallery();
@@ -88,4 +89,12 @@ function downloadCanvas(elMeme, filename) {
 
   const dataUrl = gElCanvas.toDataURL();
   elMeme.href = dataUrl;
+}
+
+function onSetFillColor(color) {
+	gCtx.fillStyle = color
+}
+
+function onSetStrokeColor(color) {
+	gCtx.strokeStyle = color
 }

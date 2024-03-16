@@ -124,6 +124,36 @@ a.download-link:hover {
   background-color: #f0bf39;
 }
 
+label {
+  background-color: #f7be31;
+  padding: 10px;
+  border-radius: 10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-size: 16px;
+  color: #fff; 
+  margin-bottom: 5px;
+}
+
+
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  border-color: #ceb05d;
+}
+
+select:hover {
+  border-color: #e9b91b;
+}
+
+select:focus {
+  border-color: #e9b91b;
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 13px;
