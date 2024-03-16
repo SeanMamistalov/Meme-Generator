@@ -61,6 +61,7 @@ function onUpdateTxt(newText) {
 function onImgSelect(imgId) {
   setImg(imgId);
   renderMeme();
+  document.getElementById("canvas-container").style.display = "block";
 }
 
 function onSave() {

@@ -14,8 +14,18 @@ body {
 }
 
 canvas {
+  display: flex;
   border: 5px solid #fff2ba;
   background-color: #fff;
+  margin-inline-start: 300px;
+}
+
+.canvas-container {
+  display: none;
+}
+
+.meme-canvas {
+  padding: 20px;
 }
 
 footer {
@@ -23,13 +33,11 @@ footer {
   background-color: #ffc445;
   border: 2px solid rgb(255, 255, 255);
   margin-top: 10px;
-
   color: #fff;
   text-align: center;
 }
 
 #text-input {
-  width: 100%;
   padding: 8px;
   border: 1px solid #d1b229;
   border-radius: 4px;
