@@ -21,6 +21,7 @@ var gImages = [
   { id: 19, url: "memes/19.png" },
   { id: 20, url: "memes/20.png" },
 ];
+
 var gMeme = {
   selectedImgId: 1,
   selectedLineIdx: 0,
