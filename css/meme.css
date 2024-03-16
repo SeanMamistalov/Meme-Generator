@@ -17,7 +17,7 @@ canvas {
   display: flex;
   border: 5px solid #fff2ba;
   background-color: #fff;
-  margin-inline-start: 300px;
+  margin-inline-end: 800px;
 }
 
 .canvas-container {
