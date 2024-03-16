@@ -6,6 +6,7 @@
     <title>Make Your Meme</title>
     <link rel="stylesheet" href="css/meme.css" />
     <link rel="stylesheet" href="css/gallery.css" />
+    <script src="https://kit.fontawesome.com/c705052b04.js" crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="images/pikachu-icon.png" />
   </head>
@@ -22,6 +23,18 @@
       <canvas width="500" height="500"></canvas><br />
       <input type="text" id="text-input" placeholder="Enter your text" />
     </div>
+
+  </div>
+  <button onclick="onSave()">Save</button>
+  <button onclick="onClearCanvas()">Clear</button>
+  <button onclick="onLoad()">Load</button>
+  <a href="#" onclick="downloadCanvas(this, 'myMeme.png')" download="myMeme.png" class="download-link">Download</a>
+</div>
+<div class="social-icons">
+  <button><i class="icon fa-brands fa-facebook-f" onclick="onUploadFbImg()"></i></button>
+  <button><i class="icon fa-brands fa-twitter"onclick="onUploadTwitterImg()"></i></button>
+  <button><i class="icon fa-brands fa-behance"onclick="onUploadBeImg()"></i></button>
+</div>
     <div class="gallery-container" id="gallery"></div>
 
 
@@ -29,7 +42,9 @@
 
     <script src="js/gallery-service.js"></script>
     <script src="js/meme-service.js"></script>
+    <script src="js/storage-service.js"></script>
     <script src="js/utils.js"></script>
+    <script src="js/social-icons.js"></script>
     <script src="js/gallery-controller.js"></script>
     <script src="js/meme-controller.js"></script>
   </body>

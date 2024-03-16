@@ -63,3 +63,28 @@ function onImgSelect(imgId) {
   renderMeme();
 }
 
+function onSave() {
+  saveToStorage("canvasDB", gElCanvas.toDataURL());
+}
+
+function onLoad() {
+  const savedImageData = loadFromStorage("canvasDB");
+  if (savedImageData) {
+    const img = new Image();
+    img.onload = function () {
+      gCtx.drawImage(img, 0, 0);
+    };
+    img.src = savedImageData;
+  }
+}
+
+function onClearCanvas() {
+  gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
+}
+
+function downloadCanvas(elMeme, filename) {
+  elMeme.download = filename;
+
+  const dataUrl = gElCanvas.toDataURL();
+  elMeme.href = dataUrl;
+}
