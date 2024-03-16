@@ -38,25 +38,21 @@ footer {
 
 nav {
   background-color: #ffffff;
-  padding: 10px 0; Add padding above and below
+  padding: 10px 0;
 }
 
 nav a {
   margin: 5px;
   color: orange;
-  text-decoration: none; 
-  padding: 0 20px; 
+  text-decoration: none;
+  padding: 0 20px;
 }
 
 nav a.active {
   font-weight: bold;
 }
 
-.main-header {
-  display: flex;
-}
-
 .logo-img {
-  width: 1000px; 
+  width: 500px;
   height: auto;
 }
