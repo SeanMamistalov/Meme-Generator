@@ -6,7 +6,7 @@ let gCtx;
 function onInit() {
   gElCanvas = document.querySelector("canvas");
   gCtx = gElCanvas.getContext("2d");
-  onSetFillColor('lightblue')
+  onSetFillColor("lightblue");
   drawImg();
   renderMeme();
   renderGallery();
@@ -92,9 +92,17 @@ function downloadCanvas(elMeme, filename) {
 }
 
 function onSetFillColor(color) {
-	gCtx.fillStyle = color
+  gCtx.fillStyle = color;
 }
 
-function onSetStrokeColor(color) {
-	gCtx.strokeStyle = color
+function increaseFontSize() {
+  const meme = getMemes();
+  meme.lines[meme.selectedLineIdx].size += 2;
+  renderMeme();
+}
+
+function decreaseFontSize() {
+  const meme = getMemes();
+  meme.lines[meme.selectedLineIdx].size -= 2;
+  renderMeme();
 }
