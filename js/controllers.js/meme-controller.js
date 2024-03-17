@@ -63,9 +63,38 @@ function onImgSelect(imgId) {
   renderMeme();
   document.getElementById("canvas-container").style.display = "block";
 }
-
 function onSave() {
-  saveToStorage("canvasDB", gElCanvas.toDataURL());
+  const savedContainer = document.getElementById("saved");
+  const selectedImgUrl = gImgs[gMeme.selectedImgId - 1].url;
+  const img = new Image();
+  img.onload = function () {
+    const dataUrl = gElCanvas.toDataURL();
+    const meme = { selectedImgId: gMeme.selectedImgId, url: dataUrl };
+    saveMemeToStorage(meme);
+    savedContainer.appendChild(img);
+  };
+  img.src = selectedImgUrl;
+}
+function saveMemeToStorage(meme) {
+  let savedMemes = loadFromStorage("canvasDB");
+
+  if (!Array.isArray(savedMemes)) {
+    savedMemes = [];
+  }
+
+  const selectedImgUrl = meme.url;
+
+  if (!selectedImgUrl) {
+    console.error("Image URL not found for selectedImgId:", meme.selectedImgId);
+    return;
+  }
+
+  const clonedMeme = JSON.parse(JSON.stringify(meme));
+  const dataUrl = gElCanvas.toDataURL();
+  clonedMeme.url = dataUrl;
+  savedMemes.push(clonedMeme);
+
+  saveToStorage("canvasDB", savedMemes);
 }
 
 function onLoad() {

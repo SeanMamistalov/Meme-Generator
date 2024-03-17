@@ -15,15 +15,21 @@
   <body onload="onInit()">
     <header class="main-header">
       <div class="logo-container">
-        <img class="logo-img" src="./images/LOGO/LOGO.png" alt="Meme Generator" />
+        <img
+          class="logo-img"
+          src="./images/LOGO/LOGO.png"
+          alt="Meme Generator"
+        />
       </div>
       <nav>
         <ul class="nav-menu">
           <li><a href="#gallery" class="active">Gallery</a></li>
-          <li><a href="#">Saved</a></li>
-          <li><a href="#">Randomized</a></li>
+          <li><a href="#saved">Saved</a></li>
+          <li><a href="#randomized">Randomized</a></li>
         </ul>
-        <button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <button class="menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
       </nav>
     </header>
     <div class="canvas-container" id="canvas-container">
@@ -65,6 +71,8 @@
     </div>
 
     <div class="gallery-container" id="gallery"></div>
+    <div class="save-container" id="saved"></div>
+    <div class="random-container" id="randomized"></div>
 
     <footer>© 2024 - All Rights Reserved to Sean Mamistalov</footer>
 
