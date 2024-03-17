@@ -1,18 +1,17 @@
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .gallery-image {
-    width: 150px;
-    height: auto;
-    margin: 10px; 
-    cursor: pointer; 
-    transition: transform 0.2s;
-  }
-  
-  .gallery-image:hover {
-    transform: scale(1.1);
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
