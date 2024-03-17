@@ -15,16 +15,15 @@
   <body onload="onInit()">
     <header class="main-header">
       <div class="logo-container">
-        <img
-          class="logo-img"
-          src="./images/LOGO/LOGO.png"
-          alt="Meme Generator"
-        />
+        <img class="logo-img" src="./images/LOGO/LOGO.png" alt="Meme Generator" />
       </div>
       <nav>
-        <a href="#gallery" class="active">Gallery</a>
-        <a href="#">Saved</a>
-        <a href="#">Randomized</a>
+        <ul class="nav-menu">
+          <li><a href="#gallery" class="active">Gallery</a></li>
+          <li><a href="#">Saved</a></li>
+          <li><a href="#">Randomized</a></li>
+        </ul>
+        <button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
       </nav>
     </header>
     <div class="canvas-container" id="canvas-container">

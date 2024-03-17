@@ -7,21 +7,65 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-
   background-color: rgb(255, 236, 202);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-canvas {
+header {
+  width: 100%;
   display: flex;
-  border: 5px solid #fff2ba;
-  background-color: #fff;
-  margin-inline-end: 800px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.canvas-container {
-  display: none;
+.logo-container {
+  margin-left: 20px;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 5px;
+}
+
+nav a {
+  color: orange;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: auto;
+  color: orange;
+}
+
+canvas {
+  border: 5px solid #fff2ba;
+  background-color: #fff;
+  width: 500px;
+  height: 500px;
 }
 
 .meme-canvas {
@@ -44,29 +88,7 @@ footer {
   box-sizing: border-box;
 }
 
-nav {
-  background-color: #ffffff;
-  padding: 10px 0;
-}
-
-nav a {
-  margin: 5px;
-  color: orange;
-  text-decoration: none;
-  padding: 0 20px;
-}
-
-nav a.active {
-  font-weight: bold;
-}
-
-.logo-img {
-  width: 500px;
-  height: auto;
-}
-
 button {
-  margin-top: 10px;
   padding: 10px 20px;
   background-color: #ffc445;
   border: none;
@@ -120,6 +142,7 @@ a.download-link:hover {
 .social-icons button i.fa-behance {
   color: #1769ff;
 }
+
 .social-icons button:hover {
   background-color: #f0bf39;
 }
@@ -138,7 +161,7 @@ a.download-link:hover {
   }
 
   .logo-img {
-    width: 300px;
+    width: 100px;
   }
 
   nav {
