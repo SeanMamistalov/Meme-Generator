@@ -31,8 +31,16 @@
           <i class="fas fa-bars"></i>
         </button>
       </nav>
+      <!-- Mobile menu -->
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#randomized">Randomized</a></li>
+          <li><a href="#saved">Saved</a></li>
+        </ul>
+      </nav>
     </header>
-    <div class="canvas-container" id="canvas-container">
+    <div class="canvas-container" id="canvas-container" style="display: none">
       <div class="meme-canvas">
         <canvas width="500" height="500"></canvas><br />
         <input type="text" id="text-input" placeholder="Enter your text" />
@@ -74,6 +82,7 @@
     <div class="gallery-container" id="gallery"></div>
     <div class="save-container" id="saved"></div>
     <div class="random-container" id="randomized"></div>
+    <div class="editor-container" id="editor"></div>
 
     <footer>© 2024 - All Rights Reserved to Sean Mamistalov</footer>
 

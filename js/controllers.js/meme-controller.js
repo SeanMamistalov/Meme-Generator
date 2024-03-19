@@ -104,6 +104,13 @@ function onSave() {
   };
   img.src = selectedImgUrl;
 }
+
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenu.classList.toggle("show");
+}
+
+
 function saveMemeToStorage(meme) {
   let savedMemes = loadFromStorage("canvasDB");
 
