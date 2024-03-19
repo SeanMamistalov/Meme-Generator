@@ -176,25 +176,22 @@ a.download-link:hover {
 
 /* Mobile menu */
 .mobile-menu {
-  display: none; /* Initially hide mobile menu */
+  display: none; 
 }
 
 .menu-btn {
-  display: none; /* Initially hide menu button */
+  display: none; 
 }
 
 @media (max-width: 600px) {
-  /* Show mobile menu and hide regular menu */
   .mobile-menu {
     display: block;
   }
 
-  /* Show menu button */
   .menu-btn {
     display: block;
   }
 
-  /* Hide regular menu on small screens */
   nav ul {
     display: none;
   }
