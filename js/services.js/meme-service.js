@@ -53,3 +53,19 @@ function setImg(imgId) {
 function getImgs() {
   return gImgs;
 }
+
+function addNewLine() {
+  const meme = getMemes();
+  const newLine = {
+    txt: "New Line",
+    size: 20,
+    color: "",
+  };
+  const insertIndex = meme.selectedLineIdx + 1;
+  meme.lines.splice(insertIndex, 0, newLine);
+
+  meme.selectedLineIdx = insertIndex;
+
+  renderMeme();
+  document.getElementById("text-input").value = ""; 
+}
