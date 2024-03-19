@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make Your Meme</title>
+    <link rel="stylesheet" href="css/meme.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <script
+      src="https://kit.fontawesome.com/c705052b04.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="images/pikachu-icon.png" />
+  </head>
+  <body onload="onInit()">
+    <header class="main-header">
+      <div class="logo-container">
+        <img
+          class="logo-img"
+          src="./images/LOGO/LOGO.png"
+          alt="Meme Generator"
+        />
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#gallery" class="active">Gallery</a></li>
+          <li><a href="#saved">Saved</a></li>
+          <li><a href="#randomized">Randomized</a></li>
+        </ul>
+        <button class="menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    <div class="canvas-container" id="canvas-container">
+      <div class="meme-canvas">
+        <canvas width="500" height="500"></canvas><br />
+        <input type="text" id="text-input" placeholder="Enter your text" />
+        <input
+          type="color"
+          id="color-input"
+          onchange="onSetFillColor(this.value)"
+        />
+        <button onclick="onSave()">Save</button>
+        <button onclick="onClearCanvas()">Clear</button>
+        <button onclick="addNewLine()">Add line</button>
+        <button onclick="switchLine()">Switch line</button>
+        <a
+          href="#"
+          onclick="downloadCanvas(this, 'myMeme.png')"
+          download="myMeme.png"
+          class="download-link"
+          >Download</a
+        >
+        <button onclick="increaseFontSize()">+</button>
+        <button onclick="decreaseFontSize()">-</button>
+      </div>
+      <div class="social-icons">
+        <button>
+          <i class="icon fa-brands fa-facebook-f" onclick="onUploadFbImg()"></i>
+        </button>
+        <button>
+          <i
+            class="icon fa-brands fa-twitter"
+            onclick="onUploadTwitterImg()"
+          ></i>
+        </button>
+        <button>
+          <i class="icon fa-brands fa-behance" onclick="onUploadBeImg()"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="gallery-container" id="gallery"></div>
+    <div class="save-container" id="saved"></div>
+    <div class="random-container" id="randomized"></div>
+
+    <footer>© 2024 - All Rights Reserved to Sean Mamistalov</footer>
+
+    <script src="js/services.js/gallery-service.js"></script>
+    <script src="js/services.js/meme-service.js"></script>
+    <script src="js/services.js/storage-service.js"></script>
+    <script src="js/social-icons.js"></script>
+
+    <script src="js/controllers.js/gallery-controller.js"></script>
+    <script src="js/controllers.js/meme-controller.js"></script>
+  </body>
+</html>
