@@ -67,5 +67,18 @@ function addNewLine() {
   meme.selectedLineIdx = insertIndex;
 
   renderMeme();
-  document.getElementById("text-input").value = ""; 
+  document.getElementById("text-input").value = "";
+}
+function deleteLine() {
+  const memeData = getMemes();
+
+  if (memeData.lines.length > 1) {
+    memeData.lines.splice(memeData.selectedLineIdx, 1);
+
+    if (memeData.selectedLineIdx >= memeData.lines.length) {
+      memeData.selectedLineIdx = memeData.lines.length - 1;
+    }
+
+    renderMeme();
+  }
 }

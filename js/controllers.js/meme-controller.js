@@ -110,7 +110,6 @@ function toggleMenu() {
   mobileMenu.classList.toggle("show");
 }
 
-
 function saveMemeToStorage(meme) {
   let savedMemes = loadFromStorage("canvasDB");
 
@@ -158,4 +157,8 @@ function decreaseFontSize() {
   const meme = getMemes();
   meme.lines[meme.selectedLineIdx].size -= 2;
   renderMeme();
+}
+
+function onDeleteLine(lineIndex) {
+  deleteLine(lineIndex);
 }
