@@ -136,12 +136,17 @@ function onClearCanvas() {
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
 }
 
-function downloadCanvas(elMeme, filename) {
-  elMeme.download = filename;
 
-  const dataUrl = gElCanvas.toDataURL();
-  elMeme.href = dataUrl;
+function downloadCanvas() {
+  const canvas = document.querySelector("canvas");
+  const dataUrl = canvas.toDataURL();
+  const link = document.createElement("a");
+  link.href = dataUrl;
+  link.download = "My-PokeMeme.png";
+  link.click();
 }
+
+
 
 function onSetFillColor(color) {
   gCtx.fillStyle = color;

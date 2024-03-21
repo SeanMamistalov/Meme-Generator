@@ -1,18 +1,45 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #040a2c;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  background-color: rgb(255, 236, 202);
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  background-color: rgb(255, 237, 214);
 }
 
-header {
+a,
+a:focus,
+a:visited,
+a:active {
+  cursor: pointer;
+  color: initial;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* HEADER */
+.main-header {
+  background-color: #ff7f00;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,6 +54,11 @@ header {
 .logo-img {
   width: 100px;
   height: auto;
+  transition: all 0.2s;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
 }
 
 nav {
@@ -46,21 +78,6 @@ nav li {
   margin: 5px;
 }
 
-nav a {
-  color: orange;
-  text-decoration: none;
-  padding: 0 8px;
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  margin-left: auto;
-  color: orange;
-}
-
 canvas {
   border: 5px solid #fff2ba;
   background-color: #fff;
@@ -73,106 +90,13 @@ canvas {
   padding: 20px;
 }
 
-
-#text-input {
-  padding: 8px;
-  border: 1px solid #d1b229;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #ffc445;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #ffd56e;
-}
-
-a.download-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffc445;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-a.download-link:hover {
-  background-color: #ffd56e;
-}
-
-.social-icons button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  border: 1px solid transparent;
-}
-
-.social-icons button i {
-  font-size: 24px;
-}
-
-.social-icons button i.fa-facebook-f {
-  color: #3b5998;
-}
-
-.social-icons button i.fa-twitter {
-  color: #1da1f2;
-}
-
-.social-icons button i.fa-behance {
-  color: #1769ff;
-}
-
-.social-icons button:hover {
-  background-color: #f0bf39;
-}
-
-#color-input {
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  background-color: #ecc149;
-}
-
-@media (min-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-
-  .logo-img {
-    width: 150px;
-  }
-
-  nav {
-    padding: 10px;
-  }
-
-  nav a {
-    padding: 0 20px;
-  }
-}
-
 /* Mobile menu */
 .mobile-menu {
-  display: none; 
+  display: none;
 }
 
 .menu-btn {
-  display: none; 
+  display: none;
 }
 
 @media (max-width: 600px) {
@@ -189,29 +113,63 @@ a.download-link:hover {
   }
 }
 
+/* CANVAS CONTAINER */
+.canvas-container {
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  margin: 15px auto;
+  box-shadow: 0px 0px 20px -2px #999;
+}
 
-.main-footer {
+.canvas-container {
+  box-shadow: 0 0 5pt 2pt #d3d3d3;
+}
+
+/* GALLERY */
+.gallery-container {
+  justify-content: center;
+  align-content: center;
+  background-color: antiquewhite;
+  display: absolute;
+  margin: 20px 0 100px 10%;
+  transition: opacity 0.2s;
+}
+
+.gallery-container img {
+  cursor: pointer;
+  width: 80%;
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  box-shadow: 0px 5px 6px -5px rgba(0, 0, 0, 0.3);
+}
+
+.about-section {
+  margin-bottom: 10px;
   background-color: #ff7f00;
-  
+  border-top: 2px solid white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .about-section .my-img img {
-  width: 30%;
+  width: 20%;
   border-radius: 10%;
-  border: 7px solid #fff;
 }
 
 .about-section .about-me .about-name {
-  font-size: 50px;
+  font-weight: 1000;
+  font-size: 30px;
 }
 
 .about-section .about-social a {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  color: black;
+  border-radius: 12px;
+  transition: color 0.2s;
 }
-
 .about-section .about-social a:hover {
-  color: #ff7f00;
+  color: orange;
 }
-
-
