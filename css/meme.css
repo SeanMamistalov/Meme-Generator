@@ -36,6 +36,68 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+/* Button Styles */
+.canvas-controls button {
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.canvas-controls button i {
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.canvas-controls button:hover {
+  background-color: #ff9633;
+}
+
+.canvas-controls button:focus {
+  outline: none;
+}
+/* Text Input Styles */
+.canvas-controls input[type="text"] {
+  background-color: #ff7f00;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.canvas-controls input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.canvas-controls input[type="text"]:focus {
+  outline: none;
+}
+
+.canvas-controls label {
+  color: white;
+  margin-right: 10px;
+}
+
+/* Color Input Styles */
+.canvas-controls input[type="color"] {
+  background-color: #ff7f00;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.canvas-controls input[type="color"]:focus {
+  outline: none; /* Remove focus outline */
+}
 
 /* HEADER */
 .main-header {
@@ -87,7 +149,7 @@ canvas {
 }
 
 .meme-canvas {
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Mobile menu */
@@ -119,12 +181,16 @@ canvas {
   height: 500px;
   background-color: antiquewhite;
   margin: 15px auto;
+  overflow: hidden;
 }
 
 .canvas-container {
   box-shadow: 0 0 5pt 2pt #d3d3d3;
 }
-
+.canvas-container canvas {
+  width: 100%;
+  height: 100%; 
+}
 /* GALLERY */
 .gallery-container {
   justify-content: center;
@@ -178,7 +244,7 @@ canvas {
   text-align: center;
   width: 100%;
   padding: 1rem 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .footer-logo {
@@ -186,7 +252,7 @@ canvas {
 }
 
 .footer-logo img {
-  width: 100px; 
+  width: 100px;
   height: auto;
 }
 
