@@ -73,14 +73,6 @@ canvas {
   padding: 20px;
 }
 
-footer {
-  padding: 12px;
-  background-color: #ffc445;
-  border: 2px solid rgb(255, 255, 255);
-  margin-top: 10px;
-  color: #fff;
-  text-align: center;
-}
 
 #text-input {
   padding: 8px;
@@ -196,3 +188,30 @@ a.download-link:hover {
     display: none;
   }
 }
+
+
+.main-footer {
+  background-color: #ff7f00;
+  
+}
+
+.about-section .my-img img {
+  width: 30%;
+  border-radius: 10%;
+  border: 7px solid #fff;
+}
+
+.about-section .about-me .about-name {
+  font-size: 50px;
+}
+
+.about-section .about-social a {
+  cursor: pointer;
+  color: black;
+}
+
+.about-section .about-social a:hover {
+  color: #ff7f00;
+}
+
+

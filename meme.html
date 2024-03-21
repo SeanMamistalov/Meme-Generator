@@ -50,19 +50,21 @@
           id="color-input"
           onchange="onSetFillColor(this.value)"
         />
-        <button onclick="onSave()">Save</button>
-        <button onclick="onClearCanvas()">Clear</button>
-        <button onclick="addNewLine()">Add line</button>
-        <button onclick="switchLine()">Switch line</button>
-        <a
-          href="#"
-          onclick="downloadCanvas(this, 'myMeme.png')"
-          download="myMeme.png"
-          class="download-link"
-          >Download</a
-        >
-        <button onclick="increaseFontSize()">+</button>
-        <button onclick="decreaseFontSize()">-</button>
+        <button onclick="onSave()"><i
+          class="fas fa-download fa-3x"></i></button>
+        <button onclick="onClearCanvas()"><i class="far fa-solid fa-broom fa-3x clear"></i></button>
+        <button onclick="addNewLine()"><i class="far fa-comment-dots fa-3x new-line"></i></button>
+        <button onclick="switchLine()"><i class="fas fa-exchange-alt fa-3x change-line"></i></button>
+        <button onclick="onDeleteLine()"><i class="far fa-trash-alt fa-3x delete"></i></button>
+        <button onclick="downloadCanvas(this, 'myMeme.png')" class="download-btn">
+          <i class="fas fa-download fa-3x"></i>
+          <a href="#" class="download-link" download="myMeme.png"></a>
+        </button>
+        
+          
+        <button onclick="increaseFontSize()"><i class="far fa-plus-square fa-3x font-plus"></i></button>
+        <button onclick="decreaseFontSize()"><i
+          class="far fa-minus-square fa-3x font-minus"></i></button></button>
       </div>
       <div class="social-icons">
         <button>
@@ -85,8 +87,26 @@
     <div class="random-container" id="randomized"></div>
     <div class="editor-container" id="editor"></div>
 
-    <footer>© 2024 - All Rights Reserved to Sean Mamistalov</footer>
-
+    <section class="about-section" id="about">
+      <div class="my-img"><img src="./images/me.jpg"></div>
+      <div class="about-me">
+          <p class="about-name">Sean Mamistalov </p>
+          <p class="about-text">Welcome to my meme generator's site</p>
+          <div class="about-social">
+              <ul class="flex clear-list">
+              
+                  <a href=https://www.linkedin.com/in/seanmamistalov/ target="_blank"
+                      class="social-logo fab fa-linkedin-in fa-2x"></a>
+                  <a href="https://github.com/SeanMamistalov" target="_blank" class="social-logo fab fa-github fa-2x">
+                  </a>
+              </ul>
+          </div>
+      </div>
+    </section>
+    <footer class="main-footer flex flex-column flex-center">
+      <div class="footer-logo"><img class="logo-img" src="./images/LOGO/LOGO.png"></div>
+      <p>&copy; All Rights Reserved 2020</p>
+  </footer>
     <script src="js/services.js/gallery-service.js"></script>
     <script src="js/services.js/meme-service.js"></script>
     <script src="js/services.js/storage-service.js"></script>
