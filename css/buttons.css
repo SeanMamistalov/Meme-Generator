@@ -1,9 +1,9 @@
 /* Button Styles */
 button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 .canvas-controls {
   display: flex;

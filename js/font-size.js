@@ -1,20 +1,20 @@
-"use strict";
+'use strict'
 
 function increaseFontSize() {
-  const meme = getMemes();
-  meme.lines[meme.selectedLineIdx].size += 2;
+  const meme = getMemes()
+  meme.lines[meme.selectedLineIdx].size += 2
 }
 
 function decreaseFontSize() {
-  const meme = getMemes();
-  meme.lines[meme.selectedLineIdx].size -= 2;
+  const meme = getMemes()
+  meme.lines[meme.selectedLineIdx].size -= 2
 }
 
 function onIncFontSize() {
-  increaseFontSize();
-  renderMeme();
+  increaseFontSize()
+  renderMeme()
 }
 function onDecFontSize() {
-  decreaseFontSize();
-  renderMeme();
+  decreaseFontSize()
+  renderMeme()
 }

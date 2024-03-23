@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 const gTrans = {
   title: {
@@ -29,33 +29,33 @@ const gTrans = {
     english: "Welcome to my meme generators site",
     hebrew: "ברוכים הבאים ליצירת מימז בסגנון פוקימון",
   },
-};
+}
 
 function getTrans(transKey) {
-  const transMap = gTrans[transKey];
-  if (!transMap) return "UNKNOWN";
-  let transTxt = transMap[gCurrLang];
-  if (!transTxt) transTxt = transMap.en;
-  return transTxt;
+  const transMap = gTrans[transKey]
+  if (!transMap) return "UNKNOWN"
+  let transTxt = transMap[gCurrLang]
+  if (!transTxt) transTxt = transMap.en
+  return transTxt
 }
 
 function doTrans() {
-  const els = document.querySelectorAll("[data-trans]");
+  const els = document.querySelectorAll("[data-trans]")
   els.forEach((el) => {
-    const transKey = el.dataset.trans;
-    const transTxt = getTrans(transKey);
-    if (el.placeholder) el.placeholder = transTxt;
-    else el.innerText = transTxt;
-  });
+    const transKey = el.dataset.trans
+    const transTxt = getTrans(transKey)
+    if (el.placeholder) el.placeholder = transTxt
+    else el.innerText = transTxt
+  })
 }
 
-var gCurrLang = "english";
+var gCurrLang = "english"
 
 function setLang(lang) {
-  gCurrLang = lang;
+  gCurrLang = lang
 }
 
 function onSetLang(lang) {
-  setLang(lang);
-  doTrans();
+  setLang(lang)
+  doTrans()
 }

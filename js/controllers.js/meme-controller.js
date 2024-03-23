@@ -1,80 +1,79 @@
-"use strict";
+'use strict'
 
-let gElCanvas;
-let gCtx;
+let gElCanvas
+let gCtx
 
 function onInit() {
-  gElCanvas = document.querySelector("canvas");
-  gCtx = gElCanvas.getContext("2d");
-  drawImg();
-  renderMeme();
-  renderGallery();
+  gElCanvas = document.querySelector("canvas")
+  gCtx = gElCanvas.getContext("2d")
+  drawImg()
+  renderMeme()
+  renderGallery()
 }
 
 function renderMeme() {
-  drawImg();
-  drawText();
+  drawImg()
+  drawText()
 }
 
 function onImgSelect(imgId) {
-  setImg(imgId);
-  renderMeme();
-  const canvasContainer = document.getElementById("canvas-container");
+  setImg(imgId)
+  renderMeme()
+  const canvasContainer = document.getElementById("canvas-container")
   if (canvasContainer) {
-    canvasContainer.style.display = "block";
+    canvasContainer.style.display = "block"
   } else {
-    console.error("Canvas container not found!");
+    console.error("Canvas container not found!")
   }
 }
 
 function onSetFillColor(color) {
-  gCtx.fillStyle = color;
+  gCtx.fillStyle = color
 }
 function onToggleMenu() {
-  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenu = document.getElementById("mobile-menu")
   mobileMenu.style.display =
-    mobileMenu.style.display === "block" ? "none" : "block";
+    mobileMenu.style.display === "block" ? "none" : "block"
 }
 
 function onClearCanvas() {
-  gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
+  gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
 }
 
 function onDeleteLine(lineIndex) {
-  deleteLine(lineIndex);
-  renderMeme();
-
+  deleteLine(lineIndex)
+  renderMeme()
 }
 
 function onSwitchLine() {
-  switchLine();
-  renderMeme();
-  updateControlBoxes();
+  switchLine()
+  renderMeme()
+  updateControlBoxes()
 }
 
 function onNewLine() {
-  addNewLine();
-  renderMeme();
-  document.getElementById("text-input").value = "";
+  addNewLine()
+  renderMeme()
+  document.getElementById("text-input").value = ""
 }
 
 function onUpdateTxt(newText) {
-  setLineTxt(newText);
-  renderMeme();
+  setLineTxt(newText)
+  renderMeme()
 }
 function updateControlBoxes() {
-  const memeData = getMemes();
-  const selectedLine = memeData.lines[memeData.selectedLineIdx];
+  const memeData = getMemes()
+  const selectedLine = memeData.lines[memeData.selectedLineIdx]
 
-  document.getElementById("text-input").value = selectedLine.txt;
-  document.getElementById("color-input").value = selectedLine.color;
+  document.getElementById("text-input").value = selectedLine.txt
+  document.getElementById("color-input").value = selectedLine.color
 }
 
-const textInput = document.getElementById("text-input");
+const textInput = document.getElementById("text-input")
 textInput.addEventListener("input", function () {
-  onUpdateTxt(this.value);
-});
+  onUpdateTxt(this.value)
+})
 
 function onDownload() {
-  downloadCanvas();
+  downloadCanvas()
 }

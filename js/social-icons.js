@@ -1,112 +1,112 @@
-"use strict";
+'use strict'
 
 function onUploadFbImg() {
-  const imgDataUrl = gElCanvas.toDataURL("image/jpeg");
+  const imgDataUrl = gElCanvas.toDataURL("image/jpeg")
 
   function onSuccess(uploadedImgUrl) {
-    const url = encodeURIComponent(uploadedImgUrl);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${url}`);
+    const url = encodeURIComponent(uploadedImgUrl)
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&t=${url}`)
   }
 
-  doUploadImg(imgDataUrl, onSuccess);
+  doUploadImg(imgDataUrl, onSuccess)
 }
 
 function doUploadImg(imgDataUrl, onSuccess) {
-  const formData = new FormData();
-  formData.append("img", imgDataUrl);
+  const formData = new FormData()
+  formData.append("img", imgDataUrl)
 
-  const XHR = new XMLHttpRequest();
+  const XHR = new XMLHttpRequest()
   XHR.onreadystatechange = () => {
-    if (XHR.readyState !== XMLHttpRequest.DONE) return;
-    if (XHR.status !== 200) return console.error("Error uploading image");
-    const { responseText: url } = XHR;
+    if (XHR.readyState !== XMLHttpRequest.DONE) return
+    if (XHR.status !== 200) return console.error("Error uploading image")
+    const { responseText: url } = XHR
 
-    console.log("Got back live url:", url);
-    onSuccess(url);
-  };
+    console.log("Got back live url:", url)
+    onSuccess(url)
+  }
   XHR.onerror = (req, ev) => {
     console.error(
       "Error connecting to server with request:",
       req,
       "\nGot response data:",
       ev
-    );
-  };
-  XHR.open("POST", "//ca-upload.com/here/upload.php");
-  XHR.send(formData);
+    )
+  }
+  XHR.open("POST", "//ca-upload.com/here/upload.php")
+  XHR.send(formData)
 }
-("use strict");
+('use strict')
 
 function onUploadTwitterImg() {
-  const imgDataUrl = gElCanvas.toDataURL("image/jpeg");
+  const imgDataUrl = gElCanvas.toDataURL("image/jpeg")
 
   function onSuccess(uploadedImgUrl) {
-    const url = encodeURIComponent(uploadedImgUrl);
-    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${url}`);
+    const url = encodeURIComponent(uploadedImgUrl)
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${url}`)
   }
 
-  doUploadImg(imgDataUrl, onSuccess);
+  doUploadImg(imgDataUrl, onSuccess)
 }
 
 function doUploadImg(imgDataUrl, onSuccess) {
-  const formData = new FormData();
-  formData.append("img", imgDataUrl);
+  const formData = new FormData()
+  formData.append("img", imgDataUrl)
 
-  const XHR = new XMLHttpRequest();
+  const XHR = new XMLHttpRequest()
   XHR.onreadystatechange = () => {
-    if (XHR.readyState !== XMLHttpRequest.DONE) return;
-    if (XHR.status !== 200) return console.error("Error uploading image");
-    const { responseText: url } = XHR;
+    if (XHR.readyState !== XMLHttpRequest.DONE) return
+    if (XHR.status !== 200) return console.error("Error uploading image")
+    const { responseText: url } = XHR
 
-    console.log("Got back live url:", url);
-    onSuccess(url);
-  };
+    console.log("Got back live url:", url)
+    onSuccess(url)
+  }
   XHR.onerror = (req, ev) => {
     console.error(
       "Error connecting to server with request:",
       req,
       "\nGot response data:",
       ev
-    );
-  };
-  XHR.open("POST", "//ca-upload.com/here/upload.php");
-  XHR.send(formData);
+    )
+  }
+  XHR.open("POST", "//ca-upload.com/here/upload.php")
+  XHR.send(formData)
 }
 
-("use strict");
+('use strict')
 
 function onUploadBeImg() {
-  const imgDataUrl = gElCanvas.toDataURL("image/jpeg");
+  const imgDataUrl = gElCanvas.toDataURL("image/jpeg")
 
   function onSuccess(uploadedImgUrl) {
-    const url = encodeURIComponent(uploadedImgUrl);
-    window.open(`https://www.behance.net/?u=${url}`);
+    const url = encodeURIComponent(uploadedImgUrl)
+    window.open(`https://www.behance.net/?u=${url}`)
   }
 
-  doUploadImg(imgDataUrl, onSuccess);
+  doUploadImg(imgDataUrl, onSuccess)
 }
 
 function doUploadImg(imgDataUrl, onSuccess) {
-  const formData = new FormData();
-  formData.append("img", imgDataUrl);
+  const formData = new FormData()
+  formData.append("img", imgDataUrl)
 
-  const XHR = new XMLHttpRequest();
+  const XHR = new XMLHttpRequest()
   XHR.onreadystatechange = () => {
-    if (XHR.readyState !== XMLHttpRequest.DONE) return;
-    if (XHR.status !== 200) return console.error("Error uploading image");
-    const { responseText: url } = XHR;
+    if (XHR.readyState !== XMLHttpRequest.DONE) return
+    if (XHR.status !== 200) return console.error("Error uploading image")
+    const { responseText: url } = XHR
 
-    console.log("Got back live url:", url);
-    onSuccess(url);
-  };
+    console.log("Got back live url:", url)
+    onSuccess(url)
+  }
   XHR.onerror = (req, ev) => {
     console.error(
       "Error connecting to server with request:",
       req,
       "\nGot response data:",
       ev
-    );
-  };
-  XHR.open("POST", "//ca-upload.com/here/upload.php");
-  XHR.send(formData);
+    )
+  }
+  XHR.open("POST", "//ca-upload.com/here/upload.php")
+  XHR.send(formData)
 }

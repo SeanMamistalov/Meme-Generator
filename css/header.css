@@ -1,73 +1,71 @@
 /* Header */
 .main-header {
-    background-color: #ff7f00;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .logo-container {
-    margin-left: 20px;
-  }
-  
-  .logo-img {
-    width: 100px;
-    height: auto;
-    transition: all 0.2s;
-    cursor: pointer;
-  }
-  
-  .logo-img:hover {
-    transform: scale(1.1);
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    color: #ffffff;
-    margin: 0 10px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  nav ul li::after {
-    content: "";
-    position: absolute;
-    top: 35%;
-    right: -10px;
-    width: 1px;
-    height: 10px;
-    background-color: white;
-  }
-  
-  
+  background-color: #ff7f00;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  margin-left: 20px;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  color: #ffffff;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: -10px;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+}
+
 /* Media query for mobile devices */
 @media (max-width: 600px) {
-    .menu-btn {
-      color: white;
-      display: block;
-    }
-  
-    .mobile-menu {
-      display: block;
-    }
-  
-    nav ul {
-      display: none;
-    }
+  .menu-btn {
+    color: white;
+    display: block;
   }
-  
-  @media (min-width: 601px) {
-    .menu-btn {
-      display: none;
-    }
+
+  .mobile-menu {
+    display: block;
   }
-  
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) {
+  .menu-btn {
+    display: none;
+  }
+}
