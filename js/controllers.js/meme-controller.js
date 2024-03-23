@@ -52,8 +52,22 @@ function drawText() {
     let yPos = 40 + index * (fontSize + 20);
 
     gCtx.fillText(text, gElCanvas.width / 2, yPos);
+
+    if (text.trim() !== "") {
+      if (index === memeData.selectedLineIdx) {
+        gCtx.strokeStyle = "yellow";
+        gCtx.lineWidth = 2;
+        gCtx.strokeRect(
+          20,
+          yPos - fontSize,
+          gElCanvas.width - 40,
+          fontSize + 10
+        );
+      }
+    }
   });
 }
+
 
 function switchLine() {
   const memeData = getMemes();
@@ -110,8 +124,9 @@ function onSave() {
 
 function toggleMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
-  }
+  mobileMenu.style.display =
+    mobileMenu.style.display === "block" ? "none" : "block";
+}
 
 function saveMemeToStorage(meme) {
   let savedMemes = loadFromStorage("canvasDB");
