@@ -55,7 +55,7 @@ function drawText() {
 
     if (text.trim() !== "") {
       if (index === memeData.selectedLineIdx) {
-        gCtx.strokeStyle = "yellow";
+        gCtx.strokeStyle = "orange";
         gCtx.lineWidth = 2;
         gCtx.strokeRect(
           20,
