@@ -138,6 +138,7 @@ nav ul {
 
 nav li {
   margin: 5px;
+  cursor: pointer;
 }
 
 canvas {
@@ -177,6 +178,7 @@ canvas {
 
 /* CANVAS CONTAINER */
 .canvas-container {
+  display: none;
   width: 500px;
   height: 500px;
   background-color: antiquewhite;
