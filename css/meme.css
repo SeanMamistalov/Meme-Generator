@@ -373,7 +373,6 @@ canvas {
   max-height: 400px;
 }
 
-
 .sticker {
   border: none;
   background-color: transparent;
@@ -382,10 +381,42 @@ canvas {
 
 .sticker img {
   width: 20px;
-  height: 20px; 
-  transition: transform 0.2s ease-in-out; 
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .sticker:hover img {
   transform: scale(1.1);
+}
+
+/* Style for the language select container */
+.lang {
+  margin-top: 10px; /* Adjust as needed */
+}
+
+/* Style for the select element */
+.lang select {
+  padding: 5px;
+  font-size: 0.8rem;
+  border: 1px solid #ff7f00;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.lang select option {
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.lang select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  pointer-events: none;
 }

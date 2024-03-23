@@ -230,7 +230,6 @@ const gTrans = {
     english: "Welcome to my meme generators site",
     hebrew: "ברוכים הבאים ליצירת מימז בסגנון פוקימון",
   },
-
 };
 
 function getTrans(transKey) {
