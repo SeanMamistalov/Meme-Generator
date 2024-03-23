@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function showGallery() {
     gallerySection.style.display = "block";
     savedSection.style.display = "none";
-    aboutSection.style.display = "none";
+    aboutSection.style.display = "block";
     canvasContainer.style.display = "none";
   }
 

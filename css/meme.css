@@ -96,7 +96,7 @@ button {
 }
 
 .canvas-controls input[type="color"]:focus {
-  outline: none; 
+  outline: none;
 }
 
 /* HEADER */
@@ -117,13 +117,12 @@ button {
   width: 100px;
   height: auto;
   transition: all 0.2s;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .logo-img:hover {
   transform: scale(1.1);
 }
-
 
 nav ul {
   display: flex;
@@ -135,21 +134,20 @@ nav ul {
 
 nav ul li {
   color: #ffffff;
-  margin: 0 10px; 
-  position: relative; 
+  margin: 0 10px;
+  position: relative;
   cursor: pointer;
 }
 
 nav ul li::after {
   content: "";
   position: absolute;
-  top: 35%; 
-  right: -10px; 
-  width: 1px; 
-  height: 10px; 
+  top: 35%;
+  right: -10px;
+  width: 1px;
+  height: 10px;
   background-color: white;
 }
-
 
 canvas {
   border: 2px solid #f0d9c3;
@@ -165,25 +163,25 @@ canvas {
 
 /* Mobile menu */
 .mobile-menu {
-  display: none; 
+  display: none;
   position: absolute;
-  top: 60px; 
-  right: 0; 
-  width: 200px; 
-  background-color: #ff7f00; 
+  top: 60px;
+  right: 0;
+  width: 200px;
+  background-color: #ff7f00;
 }
 
 .mobile-menu ul {
   padding: 0;
   margin: 0;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .mobile-menu li {
-  padding: 10px; 
-  border-bottom: 1px solid #f3f2f2; 
+  padding: 10px;
+  border-bottom: 1px solid #f3f2f2;
 }
 
 /* Media query for mobile devices */
@@ -197,7 +195,7 @@ canvas {
     display: block;
   }
   nav ul {
-    display: none; 
+    display: none;
   }
 }
 
@@ -242,39 +240,38 @@ canvas {
 }
 
 .about-section {
+  border-top: 0.5px solid #fff;
   margin-bottom: 10px;
   padding: 1rem;
-  flex-direction: column; 
-  align-items: center; 
+  align-items: center;
 }
 
-
 .about-section .my-img img {
-  width: 300px; 
+  width: 300px;
   border-radius: 10%;
 }
 
 .about-section .about-me {
-  margin-top: 1rem; /
-  text-align: center; 
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .about-section .about-me .about-name {
-  font-weight: 1000;
+  font-weight: 400px;
   font-size: 30px;
-  margin-bottom: 0.5rem; 
+  margin-bottom: 0.5rem;
 }
 
 .about-section .about-social {
-  margin-top: 1rem;/
+  margin-top: 1rem;
 }
 
 .about-section .about-social a {
-  margin: 0 0.5rem; 
+  margin: 0 0.5rem;
   width: 40px;
   height: 40px;
   cursor: pointer;
-  border-radius: 50%; 
+  border-radius: 50%;
   transition: color 0.2s;
 }
 
