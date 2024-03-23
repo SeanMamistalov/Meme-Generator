@@ -21,7 +21,7 @@
         <li class="saved" data-trans="saved">Saved</li>
         <li class="about" data-trans="about">About</li>
       </ul>
-      <button class="menu-btn" onclick="toggleMenu()">
+      <button class="menu-btn" onclick="onToggleMenu()">
         <i class="fas fa-bars"></i>
       </button>
     </nav>
@@ -42,12 +42,12 @@
       <input type="color" id="color-input" onchange="onSetFillColor(this.value)" style="width: 2x;" />
       <button onclick="onSave()"><i class="fa-solid fa-file-export fa-2x clear"></i></button>
       <button onclick="onClearCanvas()"><i class="far fa-solid fa-broom fa-2x clear"></i></button>
-      <button onclick="addNewLine()"><i class="far fa-comment-dots fa-2x new-line"></i></button>
-      <button onclick="switchLine()"><i class="fas fa-exchange-alt fa-2x change-line"></i></button>
+      <button onclick="onNewLine()"><i class="far fa-comment-dots fa-2x new-line"></i></button>
+      <button onclick="onSwitchLine()"><i class="fas fa-exchange-alt fa-2x change-line"></i></button>
       <button onclick="onDeleteLine()"><i class="far fa-trash-alt fa-2x delete"></i></button>
-      <button onclick="downloadCanvas(this)" class="download-btn"><i class="fas fa-download fa-2x"></i></button>
-      <button onclick="increaseFontSize()"><i class="far fa-plus-square fa-2x font-plus"></i></button>
-      <button onclick="decreaseFontSize()"><i class="far fa-minus-square fa-2x font-minus"></i></button>
+      <button onclick="onDownload(this)" class="download-btn"><i class="fas fa-download fa-2x"></i></button>
+      <button onclick="onIncFontSize()"><i class="far fa-plus-square fa-2x font-plus"></i></button>
+      <button onclick="onDecFontSize()"><i class="far fa-minus-square fa-2x font-minus"></i></button>
 
     <div class="stickers">
       <button class="sticker" onclick="addSticker('pokeball.png')">
@@ -101,8 +101,11 @@
     <div class="footer-logo"><img class="logo-img" src="./images/logo/logo.png"></div>
     <p data-trans="footer">&copy; All Rights Reserved 2024</p>
   </footer>
+  <script src="js/navigation.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/saved.js"></script>
+  <script src="js/font-size.js"></script>
 
-  <script src="js/services.js/gallery-service.js"></script>
   <script src="js/services.js/meme-service.js"></script>
   <script src="js/services.js/storage-service.js"></script>
   <script src="js/social-icons.js"></script>
