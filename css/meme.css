@@ -125,23 +125,31 @@ button {
 }
 
 
-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
 nav ul {
   display: flex;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav li {
-  margin: 5px;
+nav ul li {
+  color: #ffffff;
+  margin: 0 10px; 
+  position: relative; 
   cursor: pointer;
 }
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  top: 35%; 
+  right: -10px; 
+  width: 1px; 
+  height: 10px; 
+  background-color: white;
+}
+
 
 canvas {
   border: 2px solid #f0d9c3;
@@ -181,6 +189,7 @@ canvas {
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   .menu-btn {
+    color: white;
     display: block;
   }
 
