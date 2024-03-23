@@ -1,26 +1,26 @@
 /* Footer */
 .main-footer {
-    background-color: #ff7f00;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 1rem 0;
-    box-sizing: border-box;
-  }
-  
-  .footer-logo {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-logo img {
-    width: 100px;
-    height: auto;
-  }
-  
-  .main-footer p {
-    margin: 0;
-  }
-  
-  .main-footer p::before {
-    padding-right: 0.25rem;
-  }
+  background-color: #ff7f00;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+.main-footer p::before {
+  padding-right: 0.25rem;
+}
