@@ -1,0 +1,41 @@
+/* ABOUT */
+
+.about-section {
+  border-top: 0.5px solid #fff;
+  margin-bottom: 10px;
+  padding: 1rem;
+  align-items: center;
+}
+
+.about-section .my-img img {
+  width: 300px;
+  border-radius: 10%;
+}
+
+.about-section .about-me {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.about-section .about-me .about-name {
+  font-weight: 400px;
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.about-section .about-social {
+  margin-top: 1rem;
+}
+
+.about-section .about-social a {
+  margin: 0 0.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+
+.about-section .about-social a:hover {
+  color: orange;
+}
