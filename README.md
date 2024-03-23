@@ -3,19 +3,22 @@
 
 <br>
 
-<h2 align="center"> ⋆｡𖦹 °🐋⋆｡˚ Screens: ⋆｡𖦹 °🐋⋆｡˚</h2>
+<h2 align="center"> ⋆｡𖦹 °⚡⋆｡˚ Screens: ⋆｡𖦹 °⚡⋆｡˚</h2>
 
 <h3 align="center">Landing Page: </h3>
 
 ![landingpage](https://github.com/SeanMamistalov/Meme-Generator/assets/139708154/0ef8db33-56d8-4b84-9d0c-71605227ac5b)
 
+
 <h3 align="center">Gallery: </h3>
 
 ![gallery](https://github.com/SeanMamistalov/Meme-Generator/assets/139708154/e7e86ab9-1fb4-4fcf-8919-9e6511c03ad9)
 
+
 <h3 align="center">Editor:</h3>
 
 ![editor](https://github.com/SeanMamistalov/Meme-Generator/assets/139708154/eaefd370-289f-4035-97fc-eff4129d7ff3)
+
 
 <h3 align="center">Saved:</h3>
 
