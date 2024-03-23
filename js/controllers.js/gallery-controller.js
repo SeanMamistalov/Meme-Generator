@@ -1,7 +1,7 @@
 "use strict";
 function renderGallery() {
   const galleryContainer = document.getElementById("gallery");
-  const images = getImgs(); 
+  const images = getImgs();
   images.forEach((image) => {
     const imgElement = document.createElement("img");
     imgElement.src = image.url;
@@ -17,3 +17,51 @@ function renderGallery() {
     galleryContainer.appendChild(imgElement);
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryNavItem = document.querySelector(".gallery");
+  const savedNavItem = document.querySelector(".saved");
+  const aboutNavItem = document.querySelector(".about");
+  const gallerySection = document.getElementById("gallery");
+  const savedSection = document.getElementById("saved-container");
+  const aboutSection = document.getElementById("about");
+  const canvasContainer = document.getElementById("canvas-container");
+
+  galleryNavItem.addEventListener("click", function (event) {
+    event.preventDefault();
+    showGallery();
+  });
+
+  savedNavItem.addEventListener("click", function (event) {
+    event.preventDefault();
+    showSavedMemes();
+  });
+
+  aboutNavItem.addEventListener("click", function (event) {
+    event.preventDefault();
+    showAbout();
+  });
+
+  function showGallery() {
+    gallerySection.style.display = "block";
+    savedSection.style.display = "none";
+    aboutSection.style.display = "none";
+    canvasContainer.style.display = "none";
+  }
+
+  function showSavedMemes() {
+    gallerySection.style.display = "none";
+    savedSection.style.display = "block";
+    aboutSection.style.display = "none";
+    canvasContainer.style.display = "none";
+  }
+
+  function showAbout() {
+    gallerySection.style.display = "none";
+    savedSection.style.display = "none";
+    aboutSection.style.display = "block";
+    canvasContainer.style.display = "none";
+  }
+
+  showGallery();
+});

@@ -93,14 +93,17 @@ function onImgSelect(imgId) {
 }
 
 function onSave() {
-  const savedContainer = document.getElementById("saved");
+  const savedContainer = document.getElementById("saved-container");
   const selectedImgUrl = gImgs[gMeme.selectedImgId - 1].url;
   const img = new Image();
   img.onload = function () {
     const dataUrl = gElCanvas.toDataURL();
     const meme = { selectedImgId: gMeme.selectedImgId, url: dataUrl };
     saveMemeToStorage(meme);
-    savedContainer.appendChild(img);
+    const savedImg = document.createElement("img");
+    savedImg.src = dataUrl;
+    savedImg.classList.add("saved-image");
+    savedContainer.appendChild(savedImg);
   };
   img.src = selectedImgUrl;
 }
@@ -136,7 +139,6 @@ function onClearCanvas() {
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
 }
 
-
 function downloadCanvas() {
   const canvas = document.querySelector("canvas");
   const dataUrl = canvas.toDataURL();
@@ -145,8 +147,6 @@ function downloadCanvas() {
   link.download = "My-PokeMeme.png";
   link.click();
 }
-
-
 
 function onSetFillColor(color) {
   gCtx.fillStyle = color;
