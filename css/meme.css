@@ -96,7 +96,7 @@ button {
 }
 
 .canvas-controls input[type="color"]:focus {
-  outline: none; /* Remove focus outline */
+  outline: none; 
 }
 
 /* HEADER */
@@ -117,11 +117,13 @@ button {
   width: 100px;
   height: auto;
   transition: all 0.2s;
+  cursor: pointer; 
 }
 
 .logo-img:hover {
   transform: scale(1.1);
 }
+
 
 nav {
   display: flex;

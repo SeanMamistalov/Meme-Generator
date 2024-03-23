@@ -13,7 +13,6 @@ function renderGallery() {
     imgElement.addEventListener("click", function () {
       onImgSelect(image.id);
     });
-
     galleryContainer.appendChild(imgElement);
   });
 }
@@ -26,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedSection = document.getElementById("saved-container");
   const aboutSection = document.getElementById("about");
   const canvasContainer = document.getElementById("canvas-container");
+  const logoImg = document.querySelector(".logo-img");
 
   galleryNavItem.addEventListener("click", function (event) {
     event.preventDefault();
@@ -42,6 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     showAbout();
   });
 
+  logoImg.addEventListener("click", function (event) {
+    event.preventDefault();
+    showGallery();
+  });
+  
   function showGallery() {
     gallerySection.style.display = "block";
     savedSection.style.display = "none";
@@ -54,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     savedSection.style.display = "block";
     aboutSection.style.display = "none";
     canvasContainer.style.display = "none";
+    savedSection.innerHTML = 'Hello Buddy! <br> you do not have any saved memes '
   }
 
   function showAbout() {
