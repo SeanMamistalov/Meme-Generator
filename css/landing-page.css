@@ -28,17 +28,20 @@ body {
   font-size: 3em;
   margin-bottom: 10px;
   color: #fdfdfd;
-  text-shadow: 2px 5px 6px rgba(255, 205, 67, 0.959);
+  text-shadow: 30px 30px 200px rgba(200, 255, 255, 0.8);
   letter-spacing: 2px;
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #eee7e7 50%, #e41e1e 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .move-to-btn {
   display: inline-block;
   text-decoration: none;
-  border: none;
-  background-color: #ffbe30;
-  color: #ffffff;
+  border: 2px solid #000000;
+  background: linear-gradient(to right, #e41e1e 50%, #eee7e7 50%);
+  color: black;
   padding: 12px 24px;
   border-radius: 25px;
   font-size: 1.2em;
@@ -46,7 +49,7 @@ body {
 }
 
 .move-to-btn:hover {
-  background-color: #ff7f00;
+  background: #e41e1e;
 }
 
 @media (min-width: 600px) {
