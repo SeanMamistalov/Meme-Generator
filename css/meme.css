@@ -157,23 +157,43 @@ canvas {
 
 /* Mobile menu */
 .mobile-menu {
-  display: none;
+  display: none; 
+  position: absolute;
+  top: 60px; 
+  right: 0; 
+  width: 200px; 
+  background-color: #ff7f00; /* Set the background color */
 }
 
-.menu-btn {
-  display: none;
+.mobile-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Align items vertically */
+  text-align: center;
 }
 
+.mobile-menu li {
+  padding: 10px; 
+  border-bottom: 1px solid #f3f2f2; 
+}
+
+/* Media query for mobile devices */
 @media (max-width: 600px) {
-  .mobile-menu {
-    display: block;
-  }
-
   .menu-btn {
     display: block;
   }
 
+  .mobile-menu {
+    display: block;
+  }
   nav ul {
+    display: none; 
+  }
+}
+
+@media (min-width: 601px) {
+  .menu-btn {
     display: none;
   }
 }
