@@ -269,7 +269,7 @@ canvas {
 .canvas-container {
   display: none;
   width: 500px;
-  height: 670px;
+  height: 680px;
   background-color: antiquewhite;
   margin: 15px auto;
   overflow: hidden;
@@ -371,4 +371,21 @@ canvas {
   padding: 10px;
   max-width: 400px;
   max-height: 400px;
+}
+
+
+.sticker {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sticker img {
+  width: 20px;
+  height: 20px; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.sticker:hover img {
+  transform: scale(1.1);
 }

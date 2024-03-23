@@ -12,7 +12,7 @@
 <body onload="onInit()">
   <header class="main-header">
     <div class="logo-container">
-        <img class="logo-img" src="./images/LOGO/LOGO.png" alt="Meme Generator">
+        <img class="logo-img" src="./images/logo/logo.png" alt="Meme Generator">
     </div>
     
     <nav>
@@ -47,6 +47,21 @@
       <button onclick="downloadCanvas(this)" class="download-btn"><i class="fas fa-download fa-2x"></i></button>
       <button onclick="increaseFontSize()"><i class="far fa-plus-square fa-2x font-plus"></i></button>
       <button onclick="decreaseFontSize()"><i class="far fa-minus-square fa-2x font-minus"></i></button>
+
+    <div class="stickers">
+      <button class="sticker" onclick="addSticker('pokeball.png')">
+        <img src="images/stickers/pokeball.png" alt="Pokeball">
+      </button>
+      <button class="sticker" onclick="addSticker('charmander.png')">
+        <img src="images/stickers/charmander.png" alt="Charmander">
+      </button>
+      <button class="sticker" onclick="addSticker('pikachu.png')">
+        <img src="images/stickers/pikachu.png" alt="Pikachu">
+      </button>     
+      <button class="sticker" onclick="addSticker('snorlax.png')">
+        <img src="images/stickers/snorlax.png" alt="Snorlax">
+      </button>
+      </div>
     </div>
     <div class="meme-canvas">
       <canvas width="500" height="500"></canvas><br />
@@ -76,7 +91,7 @@
   </section>
 
   <footer class="main-footer flex flex-column flex-center">
-    <div class="footer-logo"><img class="logo-img" src="./images/LOGO/LOGO.png"></div>
+    <div class="footer-logo"><img class="logo-img" src="./images/logo/logo.png"></div>
     <p>&copy; All Rights Reserved 2024</p>
   </footer>
 

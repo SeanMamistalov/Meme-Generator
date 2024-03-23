@@ -182,3 +182,23 @@ function decreaseFontSize() {
 function onDeleteLine(lineIndex) {
   deleteLine(lineIndex);
 }
+
+
+function addSticker(stickerImage) {
+  const canvas = document.querySelector('.meme-canvas canvas');
+  const ctx = canvas.getContext('2d');
+
+  const sticker = new Image();
+  sticker.onload = function() {
+    const imgWidth = sticker.width;
+    const imgHeight = sticker.height;
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+    const stickerX = canvasWidth - imgWidth - 200; 
+    const stickerY = canvasHeight - imgHeight - 400; 
+
+    ctx.drawImage(sticker, stickerX, stickerY);
+  };
+
+  sticker.src = `images/stickers/${stickerImage}`;
+}
