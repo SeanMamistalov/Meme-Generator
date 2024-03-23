@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     showGallery();
   });
-  
+
   function showGallery() {
     gallerySection.style.display = "block";
     savedSection.style.display = "none";
@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     savedSection.style.display = "block";
     aboutSection.style.display = "none";
     canvasContainer.style.display = "none";
-    savedSection.innerHTML = 'Hello Buddy! <br> you do not have any saved memes '
   }
 
   function showAbout() {
