@@ -110,8 +110,8 @@ function onSave() {
 
 function toggleMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.classList.toggle("show");
-}
+  mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+  }
 
 function saveMemeToStorage(meme) {
   let savedMemes = loadFromStorage("canvasDB");
