@@ -68,7 +68,6 @@ function drawText() {
   });
 }
 
-
 function switchLine() {
   const memeData = getMemes();
   const numLines = memeData.lines.length;
@@ -183,22 +182,82 @@ function onDeleteLine(lineIndex) {
   deleteLine(lineIndex);
 }
 
-
 function addSticker(stickerImage) {
-  const canvas = document.querySelector('.meme-canvas canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.querySelector(".meme-canvas canvas");
+  const ctx = canvas.getContext("2d");
 
   const sticker = new Image();
-  sticker.onload = function() {
+  sticker.onload = function () {
     const imgWidth = sticker.width;
     const imgHeight = sticker.height;
     const canvasWidth = canvas.width;
     const canvasHeight = canvas.height;
-    const stickerX = canvasWidth - imgWidth - 200; 
-    const stickerY = canvasHeight - imgHeight - 400; 
+    const stickerX = canvasWidth - imgWidth - 200;
+    const stickerY = canvasHeight - imgHeight - 400;
 
     ctx.drawImage(sticker, stickerX, stickerY);
   };
 
   sticker.src = `images/stickers/${stickerImage}`;
+}
+
+const gTrans = {
+  title: {
+    english: "Meme Generator",
+    hebrew: "מחולל ממים",
+  },
+  gallery: {
+    english: "Gallery",
+    hebrew: "גלריה",
+  },
+  saved: {
+    english: "Saved",
+    hebrew: "שמור",
+  },
+  about: {
+    english: "Saved",
+    hebrew: "אודות",
+  },
+  footer: {
+    english: "All Rights Reserved 2024",
+    hebrew: "© כל הזכויות שמורות 2024",
+  },
+  name: {
+    english: "Sean Mamistalov",
+    hebrew: "שון ממיסטלוב",
+  },
+  text: {
+    english: "Welcome to my meme generators site",
+    hebrew: "ברוכים הבאים ליצירת מימז בסגנון פוקימון",
+  },
+
+};
+
+function getTrans(transKey) {
+  const transMap = gTrans[transKey];
+  if (!transMap) return "UNKNOWN";
+  let transTxt = transMap[gCurrLang];
+  if (!transTxt) transTxt = transMap.en;
+  return transTxt;
+}
+
+function doTrans() {
+  const els = document.querySelectorAll("[data-trans]");
+  els.forEach((el) => {
+    const transKey = el.dataset.trans;
+    const transTxt = getTrans(transKey);
+    if (el.placeholder) el.placeholder = transTxt;
+    else el.innerText = transTxt;
+  });
+}
+
+var gCurrLang = "english";
+
+function setLang(lang) {
+  gCurrLang = lang;
+}
+
+function onSetLang(lang) {
+  setLang(lang);
+  doTrans();
 }

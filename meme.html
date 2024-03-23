@@ -17,9 +17,9 @@
     
     <nav>
       <ul class="nav-menu">
-        <li class="gallery">Gallery</a></li>
-        <li class="saved">Saved</a></li>
-        <li class="about">About</a></li>
+        <li class="gallery" data-trans="gallery">Gallery</li>
+        <li class="saved" data-trans="saved">Saved</li>
+        <li class="about" data-trans="about">About</li>
       </ul>
       <button class="menu-btn" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
@@ -33,6 +33,7 @@
         <li class="about">About</li>
       </ul>
     </nav>
+    
   </header>
 
   <div class="canvas-container" id="canvas-container" style="display: none">
@@ -79,8 +80,8 @@
   <section class="about-section" id="about">
     <div class="my-img"><img src="./images/me.jpg"></div>
     <div class="about-me">
-      <p class="about-name">Sean Mamistalov</p>
-      <p class="about-text">Welcome to my meme generator's site</p>
+      <p class="about-name" data-trans="name">Sean Mamistalov</p>
+      <p class="about-text" data-trans="text">Welcome to my meme generator's site</p>
       <div class="about-social">
         <ul class="flex clear-list">
           <a href=https://www.linkedin.com/in/seanmamistalov/ target="_blank" class="social-logo fab fa-linkedin-in fa-2x"></a>
@@ -89,10 +90,16 @@
       </div>
     </div>
   </section>
+  <div class="lang">
+    <select onchange="onSetLang(this.value)">
+        <option value="english">🇬🇧 English</option>
+        <option value="hebrew">🇮🇱 עברית</option>
+    </select>
+</div>
 
   <footer class="main-footer flex flex-column flex-center">
     <div class="footer-logo"><img class="logo-img" src="./images/logo/logo.png"></div>
-    <p>&copy; All Rights Reserved 2024</p>
+    <p data-trans="footer">&copy; All Rights Reserved 2024</p>
   </footer>
 
   <script src="js/services.js/gallery-service.js"></script>
