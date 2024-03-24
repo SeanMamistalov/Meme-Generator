@@ -91,7 +91,13 @@ canvas {
   max-height: 400px;
 }
 
+.stickers {
+  display: flex;
+  justify-content: center;
+}
+
 .sticker {
+  margin: 5px; 
   border: none;
   background-color: transparent;
   cursor: pointer;
