@@ -134,23 +134,24 @@ function deleteLine() {
   }
 }
 
-function addSticker(stickerImage) {
-  const canvas = document.querySelector(".meme-canvas canvas")
-  const ctx = canvas.getContext("2d")
+function addSticker(imgSrc) {
+  const stickerSize = 64 
+  const canvasWidth = gElCanvas.width
+  const canvasHeight = gElCanvas.height
 
-  const sticker = new Image()
-  sticker.onload = function () {
-    const imgWidth = sticker.width
-    const imgHeight = sticker.height
-    const canvasWidth = canvas.width
-    const canvasHeight = canvas.height
-    const stickerX = canvasWidth - imgWidth - 200
-    const stickerY = canvasHeight - imgHeight - 400
+  const xPos = Math.random() * (canvasWidth - stickerSize) 
+  const yPos = Math.random() * (canvasHeight - stickerSize) 
 
-    ctx.drawImage(sticker, stickerX, stickerY)
+  const sticker = {
+    img: new Image(),
+    x: xPos,
+    y: yPos
   }
 
-  sticker.src = `images/stickers/${stickerImage}`
+  sticker.img.src = 'images/stickers/' + imgSrc
+  sticker.img.onload = () => {
+    gCtx.drawImage(sticker.img, sticker.x, sticker.y, stickerSize, stickerSize)
+  }
 }
 
 function downloadCanvas() {
