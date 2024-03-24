@@ -6,7 +6,6 @@ let gCtx
 function onInit() {
   gElCanvas = document.querySelector("canvas")
   gCtx = gElCanvas.getContext("2d")
-  drawImg()
   renderMeme()
   renderGallery()
 }
@@ -29,6 +28,7 @@ function onImgSelect(imgId) {
 
 function onSetFillColor(color) {
   gCtx.fillStyle = color
+  renderMeme()
 }
 function onToggleMenu() {
   const mobileMenu = document.getElementById("mobile-menu")
