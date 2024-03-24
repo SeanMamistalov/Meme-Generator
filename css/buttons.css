@@ -17,7 +17,7 @@ button {
   background-color: #ff7f00;
   color: white;
   border: none;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -62,12 +62,13 @@ button {
   color: #fff;
   border: none;
   font-size: 1rem;
-  padding: 10px;
+  padding: 12px; 
   margin: 0 5px;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
+
 
 .social-btn:hover {
   background-color: #4c70ba;
