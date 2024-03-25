@@ -29,7 +29,7 @@ const gTrans = {
     english: "Welcome to my meme generators site",
     hebrew: "ברוכים הבאים ליצירת מימז בסגנון פוקימון",
   },
-   h1: {
+  h1: {
     english: "Pick a Pokemon's meme and use your design skills",
     hebrew: "תבחר מים של פוקימון ותשתמש בכישורי העיצוב שלך",
   },
